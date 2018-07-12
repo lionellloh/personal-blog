@@ -8,3 +8,8 @@ The solution
 
 https://github.com/PyMySQL/mysqlclient-python/issues/169
 
+ ModuleNotFoundError: No module named 'ConfigParser'
+ Response: pip3 install ConfigParser
+
+mysql command not found
+export PATH=${PATH}:/usr/local/mysql/bin
