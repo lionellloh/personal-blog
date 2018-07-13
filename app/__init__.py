@@ -15,9 +15,7 @@ login_manager = LoginManager
 
 def create_app(config_name):
     app = Flask(__name__, instance_relative_config=True)
-    print(10*'*')
-    print(config_name)
-    print(app_config[config_name])
+
     app.config.from_object(app_config[config_name])
     app.config.from_pyfile('config.py')
 
@@ -33,8 +31,18 @@ def create_app(config_name):
 
     from app import models
 
+    from .admin import admin as admin_blueprint
+    app.register_blueprint(admin_blueprint, url_prefix = '/admin')
+
+    from .auth import auth as auth_blueprint
+    app.register_blueprint(auth_blueprint, url_prefix = 'auth')
+
+    from .home import home as home_blueprint
+    app.register_blueprint(home_blueprint)
+
     @app.route('/')
     def hello_world():
         return 'Hello World!'
+
 
     return app
