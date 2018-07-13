@@ -9,6 +9,13 @@ def homepage():
 
     return render_template('home/index.html', title = "Welcome")
 
+home.route('/')
+
+@home.route('/about')
+def about():
+
+    return render_template('home/about.html', title = "About")
+
 @home.route('/dashboard')
 
 @login_required

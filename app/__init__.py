@@ -35,10 +35,13 @@ def create_app(config_name):
     app.register_blueprint(admin_blueprint, url_prefix = '/admin')
 
     from .auth import auth as auth_blueprint
-    app.register_blueprint(auth_blueprint, url_prefix = 'auth')
+    app.register_blueprint(auth_blueprint, url_prefix = '/auth')
 
     from .home import home as home_blueprint
     app.register_blueprint(home_blueprint)
+
+    from .blog import blog as blog_blueprint
+    app.register_blueprint(blog_blueprint, url_prefix="/blog")
 
     @app.route('/')
     def hello_world():
