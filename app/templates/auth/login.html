@@ -1,0 +1,19 @@
+
+{% import "bootstrap/utils.html" as utils %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% extends "base.html" as utils %}
+
+
+{% block title %} Login {% endblock %}
+
+{% block body %}
+
+<div class = "container-fluid content-section" align = center>
+    {{ utils.flash_messages() }}
+
+    <h1> Login to your account </h1>
+    {{wtf.quick_form(form}}
+
+</div>
+
+{% endblock %}
