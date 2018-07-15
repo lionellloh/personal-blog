@@ -13,3 +13,18 @@ https://github.com/PyMySQL/mysqlclient-python/issues/169
 
 mysql command not found
 export PATH=${PATH}:/usr/local/mysql/bin
+
+
+2059, "Authentication plugin 'caching_sha2_password' cannot be loaded: dlopen
+Solution:
+Note: For MAC OS
+
+Open MySQL from System Preferences > Initialize Database >
+Type your new password.
+Choose 'Use legacy password'
+Start the Server again.
+Now connect the MySQL Workbench
+
+
+AttributeError: 'str' object has no attribute '_sa_instance_state'
+https://stackoverflow.com/questions/33083772/sqlalchemy-attributeerror-str-object-has-no-attribute-sa-instance-state

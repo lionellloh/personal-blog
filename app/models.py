@@ -13,6 +13,7 @@ class User(UserMixin, db.Model):
     last_name = db.Column(db.String(60), index=True)
     password_hash = db.Column(db.String(128))
     is_admin = db.Column(db.Boolean, default=False)
+    post_id = db.Column(db.Integer, db.ForeignKey('posts.id'))
 
 # Below are some DB methods
 
@@ -43,13 +44,14 @@ class Post(db.Model):
     __tablename__ = "posts"
     id = db.Column(db.Integer, primary_key = True)
     title = db.Column(db.String(255), index = True)
-    draft = db.Column(db.Text())
+    author = db.Column(db.String(255), index = True)
+    # draft = db.Column(db.Text())
     content = db.Column(db.Text())
     post_timestamp = db.Column(db.DateTime())
-    edit_timestamp = db.Column(db.DateTime())
-    view_num = db.Column(db.Integer())
-    users = db.relationship('User', backref='users',
-                            lazy='dynamic')
+    # edit_timestamp = db.Column(db.DateTime())
+    # view_num = db.Column(db.Integer())
+    # users = db.relationship('User', backref='posts',
+    #                         lazy='dynamic')
 
     def __repr__(self):
         return "Post: {}".format(self.title)

@@ -1,14 +1,19 @@
 from flask import render_template, request, url_for, flash, redirect
-from flask_login import login_required
+from flask_login import login_required, current_user
 from . import blog
 from .forms import PostForm
-from ..models import Post
+from ..models import Post, User
+from datetime import datetime
+from app import db
 
 @blog.route("/")
 
 def blogposts():
 
     posts = Post.query.all()
+    posts.reverse()
+
+
     return render_template('blog/index.html', title = "Blog", posts=posts)
 
 @blog.route("/edit", methods =['GET', 'POST'])
@@ -20,8 +25,9 @@ def add_post():
     if form.validate_on_submit():
 
         post = Post(title = form.title.data,
-                    content= form.content.data)
-
+                    content= form.content.data,
+                    post_timestamp = datetime.now(),
+                    author = current_user.first_name)
         try:
             db.session.add(post)
             db.session.commit()

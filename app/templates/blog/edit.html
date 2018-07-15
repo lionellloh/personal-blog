@@ -1,7 +1,10 @@
 {% extends 'base.html' %}
 {% block title %} Blog {% endblock %}
-{ {% import "bootstrap/wtf.html" as wtf %}
+{% import "bootstrap/wtf.html" as wtf %}
 {% block body %}
+{% import "bootstrap/utils.html" as utils %}
+
+{{ utils.flashed_messages() }}
 
     <div class = "container-fluid justify-content-center" align = "center">
         <h1> Admin: Write your posts here </h1>

@@ -1,15 +1,12 @@
 {% extends 'base.html' %}
 {% block title %} Blog {% endblock %}
-
+{% import "bootstrap/utils.html" as utils %}
 {% block body %}
 
-    <div class = "container-fluid justify-content-center" align = "center">
-
-
-</div>
+   {{ utils.flashed_messages() }}
 
 {% for post in posts %}
-<div class = "container" align = "center">
+<div class = "container my-3" align = "center">
     <div class="card w-100">
   <div class="card-body">
     <h4 class="card-title"> {{post.title}}</h4>
@@ -21,7 +18,10 @@
 </div>
 
   </div>
+
 </div>
+
+{% endfor %}
 
 
 
