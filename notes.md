@@ -34,3 +34,6 @@ ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no
 
 
 https://www.digitalocean.com/community/tutorials/how-to-use-ssh-to-connect-to-a-remote-server-in-ubuntu
+
+Python locale error: unsupported locale setting
+https://stackoverflow.com/questions/14547631/python-locale-error-unsupported-locale-setting
