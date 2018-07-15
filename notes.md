@@ -28,3 +28,9 @@ Now connect the MySQL Workbench
 
 AttributeError: 'str' object has no attribute '_sa_instance_state'
 https://stackoverflow.com/questions/33083772/sqlalchemy-attributeerror-str-object-has-no-attribute-sa-instance-state
+
+ssh: The authenticity of host 'hostname' can't be established
+ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no
+
+
+https://www.digitalocean.com/community/tutorials/how-to-use-ssh-to-connect-to-a-remote-server-in-ubuntu

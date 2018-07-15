@@ -9,34 +9,67 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
 
+
 </head>
 
 <body>
 
 <ul class = "nav my-5 justify-content-center sticky-top">
     <li class = "nav-item">
-    <a class = "nav-link mx-3" href = "{{ url_for('home.homepage')}}"> <h4> Home </h4>  </a>
+    <a class = "nav-link mx-4" href = "{{ url_for('home.homepage')}}"> <h4> Home </h4>  </a>
     </li>
 
     <li class = "nav-item">
-    <a class = "nav-link mx-3" href = "{{ url_for('home.about') }}"> <h4> About </h4>  </a>
+    <a class = "nav-link mx-4" href = "{{ url_for('home.about') }}"> <h4> About </h4>  </a>
     </li>
 
     <li class = "nav-item">
-    <a class = "nav-link mx-3" href = "{{ url_for('blog.blogposts') }}"> <h4> Blog </h4>  </a>
+    <a class = "nav-link mx-4" href = "{{ url_for('blog.blogposts') }}"> <h4> Blog </h4>  </a>
     </li>
 
     <li class = "nav-item">
-        <a class = "nav-link mx-3 disabled" href = "#"> <h4> Projects<small><h6>(Coming soon)</h6> </small> </h4>  </a>
+        <a class = "nav-link mx-4 disabled" href = "#"> <h4> Projects<small><h6>(Coming soon)</h6> </small> </h4>  </a>
     </li>
 
     <li class = "nav-item">
-    <button type="button" class="btn btn-outline-primary mx-7 my-2" data-toggle="modal" data-target="#sayhello">
- // TODO:
+    <button type="button" class="btn btn-outline-primary mx-4 my-2" data-toggle="modal" data-target="#TODO">
+ TODO
 </button>
     </li>
 
 </ul>
+
+<div class="modal fade" id="TODO">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Things to update for this site</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <ol>
+            <li> Animate the welcome message</li>
+            <li> Animate this modal popping out </li>
+            <li> Admin CMS </li>
+            <li> Differentiate the nav button when I am on the page </li>
+            <li> Put a suave looking face of mine on the front page </li>
+            <li> Write stuff in the about page </li>
+            <li> Make the welcome page more catchy </li>
+            <li> Change Font for welcome page? </li>
+        </ol>
+      </div>
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>
 
     {% block body %}
     {% endblock %}
