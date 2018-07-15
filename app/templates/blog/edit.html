@@ -1,11 +1,12 @@
 {% extends 'base.html' %}
 {% block title %} Blog {% endblock %}
-
+{ {% import "bootstrap/wtf.html" as wtf %}
 {% block body %}
 
     <div class = "container-fluid justify-content-center" align = "center">
-        <h1> In construction </h1>
-        <h4> (This is damn shag lol) </h4>
+        <h1> Admin: Write your posts here </h1>
+
+        {{wtf.quick_form(form)}}
 
     </div>
 
