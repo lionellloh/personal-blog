@@ -37,3 +37,15 @@ https://www.digitalocean.com/community/tutorials/how-to-use-ssh-to-connect-to-a-
 
 Python locale error: unsupported locale setting
 https://stackoverflow.com/questions/14547631/python-locale-error-unsupported-locale-setting
+
+TODO:
+Write a script for this: http://songhuiming.github.io/pages/2016/10/30/set-up-flask-web-host-on-digitalocean-vps/
+
+Skipping adding existing rule (v6)
+https://www.digitalocean.com/community/tutorials/how-to-set-up-a-firewall-with-ufw-on-ubuntu-16-04
+
+nginx - nginx: [emerg] bind() to [::]:80 failed (98: Address already in use)
+https://stackoverflow.com/questions/14972792/nginx-nginx-emerg-bind-to-80-failed-98-address-already-in-use
+
+Hosting
+https://www.digitalocean.com/community/tutorials/how-to-serve-flask-applications-with-gunicorn-and-nginx-on-ubuntu-18-04
