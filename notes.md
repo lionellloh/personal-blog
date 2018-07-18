@@ -49,3 +49,22 @@ https://stackoverflow.com/questions/14972792/nginx-nginx-emerg-bind-to-80-failed
 
 Hosting
 https://www.digitalocean.com/community/tutorials/how-to-serve-flask-applications-with-gunicorn-and-nginx-on-ubuntu-18-04
+
+
+Secure Copy
+scp -r ./personal-blog/ lion@159.65.7.56:Setting up mysql on ubuntu vps
+
+https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-18-04
+
+
+sqlalchemy.exc.OperationalError: (_mysql_exceptions.OperationalError) (1045, "Access denied for user 'pb_admin'@'localhost' (using password: YES)") (Background on this error at: http://sqlalche.me/e/e3q8)
+
+Your password does not satisfy the current policy requirements
+https://stackoverflow.com/questions/43094726/your-password-does-not-satisfy-the-current-policy-requirements?rq=1
+
+
+------- THIS IS THE MAIN SHIT
+https://www.digitalocean.com/community/tutorials/how-to-serve-flask-applications-with-gunicorn-and-nginx-on-ubuntu-18-04
+--------
+
+bad gateway could be due to the lack of file "myproject.sock" inside ~/myproject
